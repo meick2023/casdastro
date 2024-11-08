@@ -1,0 +1,17 @@
+<h1 style="color: darkblue"><%= @article.title %></h1>
+
+<p style="color: gray"><%= @article.body %></p>
+
+<ul>
+  <li><%= link_to "Editar", edit_article_path(@article), style: "color: orange" %></li>
+  <li><%= link_to "Deletar", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Você tem certeza de que deseja DELETAR esse artigo?"
+                  }, style: "color: red" %></li>
+</ul>
+
+<h2 style="color: darkgreen">Comments</h2>
+<%= render @article.comments %>
+
+<h2 style="color: purple">Add a comment:</h2>
+<%= render "comments/form", article: @article %>

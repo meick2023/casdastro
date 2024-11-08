@@ -1,0 +1,255 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: url('https://coodesh.com/blog/wp-content/uploads/2021/10/ruby-on-rails-para-desenvolvimento-web-1152x648.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Cabeçalho */
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Links */
+a {
+  color: #35424a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e8491d;
+}
+
+/* Container principal */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #35424a;
+}
+
+/* Estilos para posts */
+.post {
+  background: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post h2 {
+  margin: 0 0 10px;
+}
+
+.post p {
+  margin: 10px 0;
+}
+
+/* Estilos para comentários */
+.comment {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 3px solid #35424a;
+}
+
+/* Formulários */
+form {
+  margin: 20px 0;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  background: #35424a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+  background: #e8491d;
+}
+
+/*
+* Este é um arquivo de manifesto que será compilado em application.css.
+*
+* Com o Propshaft, os ativos são servidos de maneira eficiente sem etapas de pré-processamento. Você ainda pode incluir
+* estilos em todo o aplicativo neste arquivo, mas tenha em mente que a precedência do CSS seguirá a ordem padrão
+* de cascata, significando que estilos declarados mais tarde no documento ou manifesto substituirão os anteriores,
+* dependendo da especificidade.
+*
+* Considere organizar os estilos em arquivos separados para melhor manutenção.
+*/
+/*-----------------------------------------/*
+/* Estilos para a página de artigo */
+
+.article-title {
+  color: darkblue;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.article-body {
+  color: gray;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.article-actions {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.article-actions li a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.article-actions .edit-link {
+  color: orange;
+}
+
+.article-actions .delete-link {
+  color: red;
+}
+
+.comments-section h2 {
+  color: darkgreen;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.add-comment-title {
+  color: purple;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+.comment-form {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+/* app/assets/stylesheets/application.css */
+
+/* Estilos do artigo */
+.article-title {
+  color: darkblue;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.article-body {
+  color: gray;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.article-actions {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.article-actions li a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.article-actions .edit-link {
+  color: orange;
+}
+
+.article-actions .delete-link {
+  color: red;
+}
+
+/* Seção de comentários */
+.comments-section {
+  margin-top: 30px;
+}
+
+.comments-section h2 {
+  color: darkgreen;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+/* Estilos dos comentários */
+.comment {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.commenter {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.comment-body {
+  font-size: 1em;
+  color: #333;
+}
+
+.comment-actions .delete-comment {
+  color: red;
+  font-size: 0.9em;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.add-comment-title {
+  color: purple;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+.comment-form {
+  margin-top: 10px;
+  padding: 15px; 
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

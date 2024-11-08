@@ -1,0 +1,18 @@
+<p style="color: gray"><%= notice %></p>
+<h1 style="color: darkblue">Articles</h1>
+
+<!-- Exibe a contagem correta dos artigos públicos com pluralização dinâmica -->
+<p style="color: darkgreen">Nosso blog já conta com <strong><%= pluralize(Article.public_count, 'artigo', 'artigos') %></strong>, e muitas outras surpresas estão por vir!</p>
+
+<ul>
+  <% @articles.each do |article| %>
+    <% unless article.archived? %> <!-- Verifica se o artigo não está arquivado -->
+      <li>
+        <%= link_to article.title, article, style: "color: purple" %> <!-- Link para visualizar o artigo -->
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "Criar Novo artigo", new_article_path, style: "color: orange" %> <!-- Link para criar um novo artigo -->
+

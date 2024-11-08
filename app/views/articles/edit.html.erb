@@ -1,0 +1,27 @@
+<h1 style="color: darkblue">Edit Article</h1>
+<%= render "form", article: @article %>
+<% content_for :title, "Editando artigo" %>
+
+<h1 style="color: darkblue">Editing article</h1>
+
+<%= render "form", article: @article %>
+
+<br>
+
+<div>
+  <%= link_to "Mostrar este artigo", @article, style: "color: orange" %> |
+  <%= link_to "Voltar aos artigos", articles_path, style: "color: orange" %>
+</div>
+
+<% if @comment %>
+  <h2 style="color: darkgreen">Editar Comentário</h2>
+   <%= form_with(model: [@article, @comment], local: true) do |form| %>
+     <div class="field">
+       <%= form.label :content, "Comentário", style: "color: darkgreen" %><br>
+       <%= form.text_area :content, style: "border: 1px solid darkgray" %>
+     </div>
+     <div class="actions">
+       <%= form.submit "Atualizar Comentário", style: "background-color: darkgreen; color: white" %>
+     </div>
+   <% end %>
+<% end %>

@@ -1,0 +1,24 @@
+<%= form_with model: [ article, article.comments.build ] do |form| %>
+
+
+
+    <p>
+      <%= form.label :"Autor do comentário" %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :"Comentário" %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <input type="submit" name="commit" value="Criar cometário" data-disable-with="Create Comment">
+    </p>
+
+
+    <p>
+      <%= form.label :status %><br>
+      <%= form.select :status, Visible::VALID_STATUSES, selected: 'public' %>
+    </p>
+  <% end %>
+  
+
