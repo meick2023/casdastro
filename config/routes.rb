@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   # Rotas para artigos e comentários aninhados
   resources :articles do
-    resources :comments, only: [:create, :destroy] # Especifica as ações permitidas para comentários
+    resources :comments, only: [:create, :destroy, :show] # Especifica as ações permitidas para comentários
     #resources :comments
   end
 

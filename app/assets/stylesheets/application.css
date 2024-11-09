@@ -1,11 +1,6 @@
 /*
  * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
+ * With Propshaft, assets are served efficiently without preprocessing steps.
  * Consider organizing styles into separate files for maintainability.
  */
 
@@ -23,14 +18,16 @@ body {
 header {
   background: #35424a;
   color: #ffffff;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
+  font-size: 1.8em;
 }
 
 /* Links */
 a {
   color: #35424a;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
@@ -39,14 +36,18 @@ a:hover {
 
 /* Container principal */
 .container {
-  width: 80%;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
   overflow: hidden;
 }
 
 /* Títulos */
 h1, h2, h3 {
   color: #35424a;
+  font-size: 2.2em;
+  letter-spacing: 0.05em;
 }
 
 /* Estilos para posts */
@@ -54,154 +55,77 @@ h1, h2, h3 {
   background: #ffffff;
   margin: 20px 0;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 .post h2 {
   margin: 0 0 10px;
+  font-size: 1.8em;
 }
 
 .post p {
   margin: 10px 0;
+  font-size: 1.1em;
 }
 
-/* Estilos para comentários */
-.comment {
-  background: #f9f9f9;
-  margin: 10px 0;
-  padding: 10px;
-  border-left: 3px solid #35424a;
+/* Estilo para o formulário de comentários */
+.comment-form {
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 60%; /* Largura do formulário */
+  max-width: 600px; /* Definindo um valor mais adequado para a largura máxima */
+  margin-left: auto;
+  margin-right: auto; /* Centraliza o formulário */
 }
+
 
 /* Formulários */
-form {
+/*form {
   margin: 20px 0;
+}*/
+form {
+  width: 100%;
+  max-width: 500px; /* Ajuste conforme necessário */
 }
 
 form input[type="text"],
 form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  height: 50px; /* Altura específica */
+  width: 100%; /* Largura flexível para preencher o espaço */
+  max-width: 100%; /* Limita a largura ao container */
+  padding: 12px; /* Define o padding */
+  margin: 5px auto; /* Centraliza o campo */
+  border: 1px solid #ccc; /* Estilo da borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  display: block; /* Garante que ocupe o bloco inteiro */
+  box-sizing: border-box; /* Faz com que o padding e border sejam inclusos na largura e altura */
+  resize: horizontal; /* Permite redimensionar a largura */
 }
+
+
+
+
 
 form input[type="submit"] {
   background: #35424a;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 20px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 form input[type="submit"]:hover {
   background: #e8491d;
-}
-
-/*
-* Este é um arquivo de manifesto que será compilado em application.css.
-*
-* Com o Propshaft, os ativos são servidos de maneira eficiente sem etapas de pré-processamento. Você ainda pode incluir
-* estilos em todo o aplicativo neste arquivo, mas tenha em mente que a precedência do CSS seguirá a ordem padrão
-* de cascata, significando que estilos declarados mais tarde no documento ou manifesto substituirão os anteriores,
-* dependendo da especificidade.
-*
-* Considere organizar os estilos em arquivos separados para melhor manutenção.
-*/
-/*-----------------------------------------/*
-/* Estilos para a página de artigo */
-
-.article-title {
-  color: darkblue;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.article-body {
-  color: gray;
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.article-actions {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 15px;
-}
-
-.article-actions li a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.article-actions .edit-link {
-  color: orange;
-}
-
-.article-actions .delete-link {
-  color: red;
-}
-
-.comments-section h2 {
-  color: darkgreen;
-  font-size: 1.5em;
-  margin-top: 20px;
-}
-
-.add-comment-title {
-  color: purple;
-  font-size: 1.3em;
-  margin-top: 20px;
-}
-
-.comment-form {
-  margin-top: 10px;
-  padding: 15px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-/* app/assets/stylesheets/application.css */
-
-/* Estilos do artigo */
-.article-title {
-  color: darkblue;
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.article-body {
-  color: gray;
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.article-actions {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 15px;
-}
-
-.article-actions li a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.article-actions .edit-link {
-  color: orange;
-}
-
-.article-actions .delete-link {
-  color: red;
 }
 
 /* Seção de comentários */
@@ -211,15 +135,16 @@ form input[type="submit"]:hover {
 
 .comments-section h2 {
   color: darkgreen;
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin-top: 20px;
 }
 
 /* Estilos dos comentários */
 .comment {
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-  margin-bottom: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .commenter {
@@ -242,14 +167,25 @@ form input[type="submit"]:hover {
 
 .add-comment-title {
   color: purple;
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin-top: 20px;
 }
 
+/* Estilo para o formulário de comentários */
 .comment-form {
-  margin-top: 10px;
-  padding: 15px; 
+  margin-top: 15px;
+  padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
+  width: 60%; /* Diminui a largura do formulário */
+  max-width: 60px;
+  margin-left: auto;
+  margin-right: auto; /* Centraliza o formulário */
 }
+
+.comment-form label {
+  font-size: 0.9em; /* Ajusta o tamanho da fonte do rótulo */
+  color: #555;
+}
+
